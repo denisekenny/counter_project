@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './components/navbar';
 import Counters from "./components/counters";
+import {Container, Row, Col} from 'reactstrap';
 import background from "./image.jpg";
 import './App.css';
 
@@ -77,8 +78,8 @@ class App extends Component {
     return (
       <React.Fragment>
       <div style={{ backgroundImage: `url(${background})`}}>
-      <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length}/>
-      <main className="container">
+      <NavBar style={{backgroundColor: '#071740', position:"sticky"}} variant = "dark"/>
+      <main className="container" style={{position:"relative"}}>
         <Counters
           counters={this.state.counters}
           onReset={this.handleReset}
