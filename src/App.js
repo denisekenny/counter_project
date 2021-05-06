@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './components/navbar';
 import Counters from "./components/counters";
+import background from "./image.jpg";
 import './App.css';
 
 class App extends Component {
@@ -75,6 +76,7 @@ class App extends Component {
     console.log('App - Rendered'); //rendered means in the DOM (before being mounted)
     return (
       <React.Fragment>
+      <div style={{ backgroundImage: `url(${background})`}}>
       <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length}/>
       <main className="container">
         <Counters
@@ -86,6 +88,7 @@ class App extends Component {
           onAdd={this.handleAdd}
         />
       </main>
+      </div>
       </React.Fragment>
     );
   }
