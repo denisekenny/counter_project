@@ -59,7 +59,7 @@ class Counters extends Component
           </Col>
         </Row>
         <Row>
-        <Col sm='12'>
+        <Col sm='10'>
         {this.props.counters.map(counter => (
           <Counter
             key={counter.id}

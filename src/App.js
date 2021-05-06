@@ -77,7 +77,7 @@ class App extends Component {
     console.log('App - Rendered'); //rendered means in the DOM (before being mounted)
     return (
       <React.Fragment>
-      <div style={{ backgroundImage: `url(${background})`}}>
+      <div style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', height: 2000}}>
       <NavBar style={{backgroundColor: '#071740', position:"sticky"}} variant = "dark"/>
       <main className="container" style={{position:"relative"}}>
         <Counters

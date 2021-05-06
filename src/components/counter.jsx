@@ -32,7 +32,7 @@ class Counter extends Component
           fontSize: 23,
           fontFamily: "Lucida Grande",
           background: this.getBadgeColour(),
-          width: 80,
+          width: 70,
           borderColor: '#57296b',
           height: 46,
           }} className={this.getBadgesClasses()}>{this.formatCount()}
