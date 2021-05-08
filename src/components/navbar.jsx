@@ -1,26 +1,51 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from "react-router-dom";
 
-//stateless functional component
-const NavBar = (props) => {
+function NavBar(props){
   return(
-    <nav className="navbar navbar-expand-md navbar-sticky bg-dark">
-      <a class="navbar-brand" href="#">denise's counters</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <div class="navigation">
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+          <Link class="navbar-brand" to="/">
+                  denise's counters!
+          </Link>
+
+          <div>
+            <ul class="navbar-nav ml-auto">
+              <li
+                class={`nav-item ${
+                  props.location.pathname === "/" ? "active" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/">
+                Home
+                <span class="sr-only">(current)</span>
+              </Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li
+              class={`nav-item  ${
+                props.location.pathname === "/general" ? "active" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/general">
+                General
+              </Link>
+          </li>
+          <li
+              class={`nav-item  ${
+                props.location.pathname === "/tetris" ? "active" : ""
+              }`}
+            >
+              <Link class="nav-link" to="/tetris">
+                Tetris
+              </Link>
           </li>
         </ul>
       </div>
+      </div>
     </nav>
+    </div>
   );
-};
+}
 
-export default NavBar
+export default withRouter(NavBar);
