@@ -6,7 +6,7 @@ function NavBar(props){
     <div class="navigation">
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
-          <Link class="navbar-brand" to="/">
+          <Link class="navbar-brand" style={{fontFamily: "Lucida Grande"}} to="/">
                   denise's counters!
           </Link>
 
@@ -17,7 +17,7 @@ function NavBar(props){
                   props.location.pathname === "/" ? "active" : ""
               }`}
             >
-              <Link class="nav-link" to="/">
+              <Link class="nav-link" style={{fontFamily: "Lucida Grande"}} to="/">
                 Home
                 <span class="sr-only">(current)</span>
               </Link>
@@ -27,7 +27,7 @@ function NavBar(props){
                 props.location.pathname === "/general" ? "active" : ""
               }`}
             >
-              <Link class="nav-link" to="/general">
+              <Link class="nav-link" style={{fontFamily: "Lucida Grande"}} to="/general">
                 General
               </Link>
           </li>
@@ -36,7 +36,7 @@ function NavBar(props){
                 props.location.pathname === "/tetris" ? "active" : ""
               }`}
             >
-              <Link class="nav-link" to="/tetris">
+              <Link class="nav-link" style={{fontFamily: "Lucida Grande"}} to="/tetris">
                 Tetris
               </Link>
           </li>

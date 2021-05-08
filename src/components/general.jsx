@@ -71,6 +71,14 @@ class General extends Component {
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
           onAdd={this.handleAdd}
+          badgeColourZero="#6964b6"
+          badgeColour="#a993e0"
+          incrementDecrementButtonColour='#ffe577'
+          delButtonColour='#e57bac'
+          inputBackground="#e1a5e2"
+          addResetButtonColour="#ffbd6c"
+          counterNamesTextColour='#ffffff'
+
         />
       </main>
       </div>

@@ -26,7 +26,7 @@ class Counters extends Component
                 fontSize: 25,
                 position: "relative",
                 color: "#000000",
-                background: "#e1a5e2",
+                background: this.props.inputBackground,
                 fontFamily: "Lucida Grande",
               }}
               onChange={this.setData}/>
@@ -38,7 +38,7 @@ class Counters extends Component
                 position: "relative",
                 color: "#000000",
                 fontFamily: "Lucida Grande",
-                background: "#ffbd6c",
+                background: this.props.addResetButtonColour,
               }}
               onClick={() => this.props.onAdd(this.state.text)}
               className="btn btn-sm m-2">Add</Button>
@@ -52,7 +52,7 @@ class Counters extends Component
                 fontSize: 25,
                 color: "#000000",
                 position: "relative",
-                background: "#ffbd6c",
+                background: this.props.addResetButtonColour,
                 fontFamily: "Lucida Grande",
               }}
               className="btn btn-primary btn-sm m-2">Reset All</Button>
@@ -66,7 +66,13 @@ class Counters extends Component
             onDelete={this.props.onDelete}
             onIncrement={this.props.onIncrement}
             onDecrement={this.props.onDecrement}
-            counter = {counter}>
+            counter = {counter}
+            badgeColour={this.props.badgeColour}
+            badgeColourZero={this.props.badgeColourZero}
+            incrementDecrementButtonColour={this.props.incrementDecrementButtonColour}
+            delButtonColour={this.props.delButtonColour}
+            counterNamesTextColour={this.props.counterNamesTextColour}
+            >
           </Counter>
       ))}
         </Col>

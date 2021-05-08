@@ -72,6 +72,13 @@ class Tetris extends Component {
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
           onAdd={this.handleAdd}
+          badgeColourZero='#292cc4'
+          badgeColour="#e96a1c"
+          incrementDecrementButtonColour='#ca2abb'
+          delButtonColour='#cf2a33'
+          inputBackground='#2bc78d'
+          addResetButtonColour='#ebcd36'
+          counterNamesTextColour='#ffffff'
         />
       </main>
       </div>

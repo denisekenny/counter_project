@@ -23,6 +23,7 @@ class Counter extends Component
       <h4 style={{
         fontSize: 30,
         fontFamily: "Lucida Grande",
+        color: this.props.counterNamesTextColour,
       }}>{this.props.counter.name}</h4>
       </Row>
 
@@ -42,7 +43,7 @@ class Counter extends Component
         <Button style={{
           fontSize: 23,
           fontFamily: "Lucida Grande",
-          background: '#ffe577',
+          background: this.props.incrementDecrementButtonColour,
           color: '#000000',
           borderWidth: 2,
           borderColor: '#57296b',
@@ -53,14 +54,14 @@ class Counter extends Component
           fontSize: 23,
           fontFamily: "Lucida Grande",
           color: '#000000',
-          background: '#ffe577',
+          background: this.props.incrementDecrementButtonColour,
           borderWidth: 2,
           borderColor: '#57296b',
         }} onClick={() => this.props.onDecrement(this.props.counter)} block={true} className="btn btn-sm m-2"> - </Button>
         </Col>
         <Col sm='1'>
         <Button style={{
-          background: '#e57bac',
+          background: this.props.delButtonColour,
           fontFamily: "Lucida Grande",
           borderWidth: 2,
           color: '#000000',
@@ -82,12 +83,13 @@ class Counter extends Component
 
   getBadgeColour()
   {
+    console.log(this.props.badgeColourZero);
     if(this.props.counter.value === 0)
     {
-      return "#6964b6";
+      return this.props.badgeColourZero;
     }
     else {
-      return "#a993e0";
+      return this.props.badgeColour;
     }
   }
 
